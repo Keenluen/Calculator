@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Calc.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div id="calculator">
+      <form>
+        <div id="display">
+          <input type="text" name="display" id="display__2" readonly>
+        </div>
+          <div id="clear">
+            <input type="button" value="." onclick="display.value += '.'" id="sign__2" style="border-radius: 10%;  background-color: rgb(218, 216, 216);">
+            <input type="button" value="AC" onclick="clearDisplay ('')" id="sign__2" style="border-radius: 10%;  background-color: rgb(218, 216, 216);">
+            <input type="button" value="DE" onclick="display.value = display.value.toString().slice (0,-1)" id="sign__2" style="border-radius: 10%;  background-color: rgb(218, 216, 216);">
+            <input type="button" value="9" onclick="appendToDisplay ('9')" id="sign__2">
+            <input type="button" value="8" onclick="appendToDisplay ('8')" id="sign__2">
+            <input type="button" value="7" onclick="appendToDisplay ('7')" id="sign__2">
+            <input type="button" value="6" onclick="appendToDisplay ('6')" id="sign__2">
+            <input type="button" value="5" onclick="appendToDisplay ('5')" id="sign__2">
+            <input type="button" value="4" onclick="appendToDisplay ('4')" id="sign__2">
+            <input type="button" value="3" onclick="appendToDisplay ('3')" id="sign__2">
+            <input type="button" value="2" onclick="appendToDisplay ('2')" id="sign__2">
+            <input type="button" value="1" onclick="appendToDisplay ('1')" id="sign__2">
+          </div>
+          <div id="signs">
+            <input type="button" value="+" onclick="appendToDisplay ('+')" id="sign">
+            <input type="button" value="-" onclick="appendToDisplay ('-')" id="sign">
+            <input type="button" value="*" onclick="appendToDisplay ('*')" id="sign">
+            <input type="button" value="/" onclick="appendToDisplay ('/')" id="sign">
+          <div>
+    <div id="num">
+      <input type="button" value="=" onclick="calculate()" id="sign__3" style="width: 125px;  background-color: rgb(218, 216, 216);">
+      <input type="button" value="0" onclick="appendToDisplay ('0')" style="border-radius: 50%;" id="sign__3">
+      <input type="button" value="00" onclick="appendToDisplay ('00')" style="border-radius: 50%;" id="sign__3">
+    </div>
+    </form>
+  </div>
+  </div>
+  <script src="Calc.js"></script>
+</body>
+</html>
